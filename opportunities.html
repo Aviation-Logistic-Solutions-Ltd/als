@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviation Logistic Solutions</title>
+    <title>Opportunities - Aviation Logistic Solutions</title>
     <style>
         body {
             margin: 0;
@@ -42,9 +42,13 @@
             font-size: 16px;
         }
 
-        /* Main Content */
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
         .hero {
-            background: url('https://image-url') no-repeat center center/cover;
+            background: url('new+banner.png') no-repeat center center/cover;
             height: 400px;
             display: flex;
             flex-direction: column;
@@ -52,17 +56,18 @@
             align-items: center;
             text-align: center;
             background-color: #0d223e;
-            background-image: url('https://image-url');
         }
 
         .hero h1 {
             font-size: 48px;
             margin: 0;
+            color: lightgreen;
         }
 
         .hero p {
             font-size: 24px;
             margin: 10px 0;
+            color: lightblue;
         }
 
         /* Content Section */
@@ -75,6 +80,7 @@
         .content h2 {
             color: lightblue;
             margin-bottom: 20px;
+            font-size: 32px;
         }
 
         .content p {
@@ -83,44 +89,59 @@
             color: lightgreen;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: #333;
-            padding: 40px;
-            text-align: left;
+        .vacancies {
+            margin: 40px 0;
         }
 
-        .contact-section h2 {
-            color: lightblue;
+        .vacancies ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .contact-section p, .contact-section a {
-            color: lightgreen;
+        .vacancies ul li {
             font-size: 18px;
+            margin-bottom: 10px;
         }
 
-        /* Quote Section */
-        .quote {
-            background-color: #0d223e;
-            padding: 40px;
+        .vacancies h3 {
             color: lightblue;
-            text-align: center;
             font-size: 24px;
-            font-style: italic;
+            margin-bottom: 10px;
         }
 
-        .quote .author {
+        .vacancies .cta {
             margin-top: 20px;
-            font-size: 18px;
+            padding: 15px 20px;
+            background-color: transparent;
+            color: #d123d1;
+            border: 2px solid #d123d1;
+            text-transform: uppercase;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .vacancies .cta:hover {
+            background-color: #d123d1;
             color: white;
         }
 
+        /* Footer */
         .footer {
             background-color: #222;
             padding: 10px;
             text-align: center;
             font-size: 16px;
             color: lightgreen;
+        }
+
+        .footer a {
+            color: lightgreen;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -133,44 +154,37 @@
         <span>Aviation Logistic Solutions</span>
     </div>
     <nav class="nav-links">
-        <a href="#what">What</a>
+        <a href="index.html">What</a>
         <a href="why.html">Why</a>
         <a href="how.html">How</a>
         <a href="where.html">Where</a>
         <a href="who.html">Who</a>
     </nav>
     <div class="contact">
-        <a href="tel:+35361719898">+353 61 719 898</a> | <a href="opportunities.html">Opportunities</a>
+        <a href="tel:+35361719898">+353 61 719 898</a> | <a href="#">Opportunities</a>
     </div>
 </header>
 
 <section class="hero">
-    <h1>Leading Commercial Aviation Into The Digital Era</h1>
+    <h1>Join Our Team</h1>
+    <p>Opportunities at Aviation Logistic Solutions</p>
 </section>
 
-<section class="content" id="what">
-    <h2>What do ALS do?</h2>
-    <p>We specialise in aircraft technical records digitisation and management.</p>
-    <p>Quick, easy & secure documentation access preventing the loss or damage of sensitive information.</p>
-    <p>We can turn your tonnes of paper into gigabytes of secure digital data, which is fully indexed, word searchable, and transferable at the push of a button.</p>
-    <p><strong>We help your business to take the risk out of records.</strong></p>
-</section>
+<section class="content">
+    <h2>Current Opportunities</h2>
+    <p>As a young organisation, we are always looking for the right people to join our team as we grow.</p>
+    <p>If you are enthusiastic, professional, focused, and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
+    <p>We are equal opportunity employers and intend to grow the business sustainably and strategically, always in full support of the clients that we serve.</p>
 
-<section class="quote">
-    <p>"Innovation doesn’t always come in the form of a new product or new technology. Sometimes it’s about a new way to address an old problem."</p>
-    <div class="author">— Bernard Lord</div>
-</section>
-
-<section class="content" id="why">
-    <h2>Aircraft Technical Records Digitisation in Shannon</h2>
-    <p>We will work closely with your business to help ensure that it can take full advantage of the cost efficiencies made available through modern technological advancement, and recent legislative changes that facilitate a full move to digital technical records.</p>
-</section>
-
-<section class="contact-section" id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Location:</strong> 5 Elite Business Park, Shannon, Co. Clare</p>
-    <p><strong>Phone:</strong> <a href="tel:+353871214301">+353 87 121 4301</a></p>
-    <p><strong>Email:</strong> <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+    <div class="vacancies">
+        <h3>Current Vacancies:</h3>
+        <ul>
+            <li>• Technical Project Manager</li>
+            <li>• Inventory Controller</li>
+            <li>• Operations Coordinator</li>
+        </ul>
+        <a class="cta" href="mailto:enquiries@aviationpartners.ie">Get in Touch: Send a cover letter and CV</a>
+    </div>
 </section>
 
 <footer class="footer">
