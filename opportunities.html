@@ -21,6 +21,8 @@
             align-items: center;
             padding: 15px 30px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1000;
         }
 
         .logo {
@@ -39,6 +41,7 @@
             color: #7289da;
         }
 
+        /* Desktop Navigation */
         .nav-links {
             display: flex;
             gap: 25px;
@@ -55,25 +58,6 @@
             color: #ffffff;
         }
 
-        /* Hide nav-links for small screens and show hamburger */
-        .nav-links {
-            display: none;
-        }
-
-        /* Hamburger icon */
-        .hamburger {
-            display: block;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #7289da;
-            margin: 5px 0;
-            transition: 0.4s;
-        }
-
         .contact {
             color: #b9bbbe;
             font-size: 16px;
@@ -86,6 +70,56 @@
 
         .contact a:hover {
             text-decoration: underline;
+        }
+
+        /* Hamburger Menu Icon */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #2c2f33;
+            text-align: center;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+            max-height: 0;
+        }
+
+        .nav-links-mobile a {
+            padding: 15px 0;
+            color: #b9bbbe;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .nav-links-mobile a:hover {
+            color: #ffffff;
+        }
+
+        /* Open Menu */
+        .nav-links-mobile.open {
+            display: flex;
+            max-height: 500px;
         }
 
         /* Hero Section */
@@ -115,65 +149,37 @@
         .content {
             background-color: #2c2f33;
             padding: 60px 20px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
         }
 
-        .content h2 {
-            color: #7289da;
+        .bio {
+            max-width: 800px;
+            background-color: #23272a;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .bio img {
+            width: 100%;
+            max-width: 300px;
             margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .bio h2 {
+            color: #7289da;
             font-size: 32px;
         }
 
-        .content p {
+        .bio p {
             font-size: 18px;
             line-height: 1.8;
             color: #b9bbbe;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-
-        .vacancies {
-            margin: 40px 0;
-        }
-
-        .vacancies ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 400px;
-        }
-
-        .vacancies ul li {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .vacancies h3 {
-            color: #7289da;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        /* CTA Button */
-        .vacancies .cta {
-            margin-top: 30px;
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: transparent;
-            color: #7289da;
-            border: 2px solid #7289da;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .vacancies .cta:hover {
-            background-color: #7289da;
-            color: white;
         }
 
         /* Footer */
@@ -194,88 +200,91 @@
             text-decoration: underline;
         }
 
-        /* Media Queries for Responsiveness */
-        @media (min-width: 768px) {
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .nav-links {
-                display: flex;
-            }
-
-            .hamburger {
                 display: none;
             }
 
-            .logo span {
-                font-size: 28px;
+            .menu-icon {
+                display: flex;
             }
-        }
 
-        @media (max-width: 768px) {
+            .nav-links-mobile {
+                max-height: 0;
+            }
+
             .hero {
                 height: 300px;
             }
 
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
 
-            .hero p {
-                font-size: 18px;
+            .content {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .content h2 {
+            .bio img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
                 font-size: 28px;
             }
 
-            .content p {
+            .bio h2 {
+                font-size: 24px;
+            }
+
+            .bio p {
                 font-size: 16px;
             }
 
-            /* Show nav-links on clicking hamburger */
-            .nav-links.active {
-                display: block;
-                position: absolute;
-                top: 70px;
-                right: 0;
-                left: 0;
-                background-color: #2c2f33;
-                width: 100%;
-                text-align: center;
-                padding: 20px 0;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 10px 0;
-                font-size: 18px;
+            .footer {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="logo.png" alt="ALS Logo">
-            </a>
-        <span>Aviation Logistic Solutions</span>
-    </div>
-    <nav class="nav-links">
-        <a href="index.html">What</a>
-        <a href="why.html">Why</a>
-        <a href="how.html">How</a>
-        <a href="where.html">Where</a>
-        <a href="who.html">Who</a>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="contact">
-        <a href="tel:+35361719898">+353 61 719 898</a> | <a href="#">Opportunities</a>
-    </div>
-</header>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="ALS Logo">
+                </a>
+            <span>Aviation Logistic Solutions</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">What</a>
+            <a href="why.html">Why</a>
+            <a href="how.html">How</a>
+            <a href="where.html">Where</a>
+            <a href="who.html">Who</a>
+            <a href="#">Careers</a>
+        </nav>
+        <div class="contact">
+            <a href="tel:+353871214301">+353 871214301</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav-links-mobile" id="mobile-menu">
+            <a href="index.html">What</a>
+            <a href="why.html">Why</a>
+            <a href="how.html">How</a>
+            <a href="where.html">Where</a>
+            <a href="who.html">Who</a>
+            <a href="#">Careers</a>
+        </nav>
+    </header>
 
 <section class="hero">
     <h1>Join Our Team</h1>
@@ -285,7 +294,7 @@
 <section class="content">
     <h2>Current Opportunities</h2>
     <p>As a young organisation, we are always looking for the right people to join our team as we grow.</p>
-    <p>If you are enthusiastic, professional, focused, and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
+    <p>If you are enthusiastic, professional, focused, have a keen eye for detail and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
     <p>We are equal opportunity employers and intend to grow the business sustainably and strategically, always in full support of the clients that we serve.</p>
 
     <div class="vacancies">
@@ -298,8 +307,8 @@
 </section>
 
 <footer class="footer">
-    <p>5 Elite Business Park, Shannon, Co. Clare | Aircraft technical records digitization | Secure digital data</p>
-    <p>+353 61 719 898 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+    <p>5 Elite Business Park, Shannon, Co. Clare, V14 FW96 | Aircraft technical records digitization | Secure digital data</p>
+    <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
 </footer>
 
 <script>
