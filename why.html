@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Why Go Digital - Aviation Logistic Solutions</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: 'Roboto', sans-serif;
+            background-color: #23272a;
+            color: #ffffff;
         }
 
         /* Header */
         header {
-            background-color: #333;
+            background-color: #2c2f33;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1000;
         }
 
         .logo {
@@ -28,77 +32,155 @@
 
         .logo img {
             max-height: 50px;
-            margin-right: 10px;
+            margin-right: 15px;
         }
 
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7289da;
+        }
+
+        /* Desktop Navigation */
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links a {
-            color: lightgreen;
+            color: #b9bbbe;
             text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .contact {
+            color: #b9bbbe;
             font-size: 16px;
         }
 
-        /* Main Content */
+        .contact a {
+            color: #7289da;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu Icon */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #2c2f33;
+            text-align: center;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+            max-height: 0;
+        }
+
+        .nav-links-mobile a {
+            padding: 15px 0;
+            color: #b9bbbe;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .nav-links-mobile a:hover {
+            color: #ffffff;
+        }
+
+        /* Open Menu */
+        .nav-links-mobile.open {
+            display: flex;
+            max-height: 500px;
+        }
+
+        /* Hero Section */
         .hero {
-            background: url('https://image-url') no-repeat center center/cover;
-            height: 300px;
+            background: url('digitalisierung_img_full.jpg') no-repeat center center/cover;
+            height: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #0d223e;
+            background-color: #23272a;
         }
 
         .hero h1 {
             font-size: 48px;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin: 10px 0;
+            font-weight: 700;
+            color: #ffffff;
         }
 
         /* Content Section */
         .content {
-            background-color: #333;
-            padding: 40px 20px;
+            background-color: #2c2f33;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .content h2 {
-            color: lightblue;
+            color: #7289da;
+            font-size: 32px;
             margin-bottom: 20px;
         }
 
         .content p {
             font-size: 18px;
-            line-height: 1.6;
-            color: lightgreen;
+            line-height: 1.8;
+            color: #b9bbbe;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Why Digital Section */
         .why-digital {
-            background-color: #0d223e;
-            padding: 40px 20px;
-            color: white;
+            background-color: #2c2f33;
+            padding: 60px 20px;
+            color: #b9bbbe;
+            text-align: center;
         }
 
         .why-digital h2 {
-            color: lightblue;
+            color: #7289da;
             font-size: 32px;
-            text-align: center;
+            margin-bottom: 20px;
         }
 
         .why-digital p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .why-digital img {
@@ -106,6 +188,8 @@
             max-width: 500px;
             margin: 20px auto;
             display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .why-digital-chart {
@@ -113,22 +197,86 @@
             justify-content: space-around;
             align-items: flex-start;
             flex-wrap: wrap;
+            gap: 40px;
         }
 
         .why-digital-chart img {
             max-width: 500px;
-            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Footer */
         .footer {
-            background-color: #222;
-            padding: 10px;
+            background-color: #2c2f33;
+            padding: 20px;
             text-align: center;
-            font-size: 16px;
-            color: lightgreen;
+            color: #b9bbbe;
+            font-size: 14px;
         }
 
+        .footer a {
+            color: #7289da;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            .nav-links-mobile {
+                max-height: 0;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .why-digital-chart {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .why-digital h2 {
+                font-size: 24px;
+            }
+
+            .why-digital p {
+                font-size: 16px;
+            }
+
+            .footer {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -139,6 +287,18 @@
         <span>Aviation Logistic Solutions</span>
     </div>
     <nav class="nav-links">
+        <a href="index.html">What</a>
+        <a href="#why">Why</a>
+        <a href="how.html">How</a>
+        <a href="where.html">Where</a>
+        <a href="who.html">Who</a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="nav-links-mobile" id="mobile-menu">
         <a href="index.html">What</a>
         <a href="#why">Why</a>
         <a href="how.html">How</a>
@@ -156,7 +316,7 @@
 
 <section class="why-digital">
     <h2>Reduce Your Overheads, Environmental Impact and Valuable Time</h2>
-    <p>There is regularly a tonne weight of paper generated by a commercial aircraft throughout the course of its life, mainly through maintenance checks. This paper has historically been retained by the operator and managed meticulously in a climate controlled environment. Across a whole fleet, technical records retention and administration leads to significant overhead cost.</p>
+    <p>There is regularly a tonne weight of paper generated by a commercial aircraft throughout the course of its life, mainly through maintenance checks. This paper has historically been retained by the operator and managed meticulously in a climate-controlled environment. Across a whole fleet, technical records retention and administration leads to significant overhead cost.</p>
 
     <p>Aviation authorities are now accepting digital technical records; no more requirement to maintain in physical paper format.</p>
 
@@ -184,6 +344,13 @@
     <p>5 Elite Business Park, Shannon, Co. Clare | Aircraft technical records digitisation | Secure digital data</p>
     <p>+353 61 719 898 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('open');
+    }
+</script>
 
 </body>
 </html>
