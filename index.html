@@ -9,20 +9,19 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #23272a;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #333333;
         }
 
         /* Header */
         header {
-            background-color: #2c2f33;
+            background-color: #ffffff;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: relative;
-            z-index: 1000;
         }
 
         .logo {
@@ -31,41 +30,39 @@
         }
 
         .logo img {
-            max-height: 50px;
+            max-height: 60px;
             margin-right: 15px;
         }
 
         .logo span {
             font-size: 24px;
             font-weight: bold;
-            color: #7289da;
+            color: #00a9d8;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 20px;
         }
 
         .nav-links a {
-            color: #b9bbbe;
+            color: #333;
             text-decoration: none;
             font-size: 16px;
-            position: relative;
-            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: #00a9d8;
         }
 
         .contact {
-            color: #b9bbbe;
             font-size: 16px;
+            color: #00a9d8;
         }
 
         .contact a {
-            color: #7289da;
             text-decoration: none;
+            color: #00a9d8;
         }
 
         .contact a:hover {
@@ -85,7 +82,7 @@
         .menu-icon div {
             width: 100%;
             height: 3px;
-            background-color: #ffffff;
+            background-color: #333;
             border-radius: 2px;
         }
 
@@ -98,7 +95,7 @@
             left: 0;
             right: 0;
             width: 100%;
-            background-color: #2c2f33;
+            background-color: #ffffff;
             text-align: center;
             overflow: hidden;
             transition: max-height 0.4s ease-in-out;
@@ -107,14 +104,13 @@
 
         .nav-links-mobile a {
             padding: 15px 0;
-            color: #b9bbbe;
+            color: #333;
             font-size: 18px;
-            text-decoration: none; /* This ensures no underlining */
+            text-decoration: none;
         }
 
         .nav-links-mobile a:hover {
-            color: #ffffff;
-            text-decoration: none; /* This ensures no underlining on hover */
+            color: #00a9d8;
         }
 
         /* Open Menu */
@@ -125,32 +121,52 @@
 
         /* Hero Section */
         .hero {
-            background: url('new+banner.png') no-repeat center center;
-            background-size: cover;
-            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #00a9d8;
+            padding: 50px 20px;
+            color: #ffffff;
+        }
+
+        .hero .left {
+            width: 50%;
+            text-align: center;
+        }
+
+        .hero .left img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero .right {
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #23272a;
+            padding: 20px;
         }
 
         .hero h1 {
-            font-size: 48px;
-            color: #e6ff99;
+            font-size: 36px;
+            color: #ffffff;
             font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ffffff;
         }
 
         /* Main Content */
         .content {
-            background-color: #2c2f33;
             padding: 60px 20px;
             text-align: center;
+            background-color: #ffffff;
         }
 
         .content h2 {
-            color: #7289da;
+            color: #00a9d8;
             margin-bottom: 20px;
             font-size: 32px;
         }
@@ -158,64 +174,22 @@
         .content p {
             font-size: 18px;
             line-height: 1.8;
-            color: #b9bbbe;
+            color: #555;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: #2c2f33;
-            padding: 60px;
-            text-align: left;
-        }
-
-        .contact-section h2 {
-            color: #7289da;
-            font-size: 28px;
-        }
-
-        .contact-section p {
-            color: #b9bbbe;
-            font-size: 18px;
-        }
-
-        .contact-section a {
-            color: #7289da;
-            text-decoration: none;
-        }
-
-        .contact-section a:hover {
-            text-decoration: underline;
-        }
-
-        /* Quote Section */
-        .quote {
-            background-color: #23272a;
-            padding: 60px;
-            text-align: center;
-            font-size: 24px;
-            color: #7289da;
-            font-style: italic;
-        }
-
-        .quote .author {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #ffffff;
-        }
-
         /* Footer */
         .footer {
-            background-color: #2c2f33;
+            background-color: #ffffff;
             padding: 20px;
             text-align: center;
-            color: #b9bbbe;
+            color: #555;
             font-size: 14px;
         }
 
         .footer a {
-            color: #7289da;
+            color: #00a9d8;
             text-decoration: none;
         }
 
@@ -225,7 +199,7 @@
 
         /* Button Styles */
         button, a.button {
-            background-color: #7289da;
+            background-color: #00a9d8;
             color: white;
             border: none;
             border-radius: 5px;
@@ -238,7 +212,7 @@
         }
 
         button:hover, a.button:hover {
-            background-color: #5a6faf;
+            background-color: #008bb5;
         }
 
         /* Responsive Design */
@@ -251,14 +225,22 @@
                 display: flex;
             }
 
-            .nav-links-mobile {
-                max-height: 0;
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero .left, .hero .right {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 28px;
             }
         }
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 36px;
+                font-size: 24px;
             }
 
             .content h2 {
@@ -267,19 +249,6 @@
 
             .content p {
                 font-size: 16px;
-            }
-
-            .quote {
-                padding: 40px 20px;
-                font-size: 20px;
-            }
-
-            .quote .author {
-                font-size: 16px;
-            }
-
-            .contact-section {
-                padding: 40px 20px;
             }
 
             .footer {
@@ -296,7 +265,6 @@
         <span>Aviation Logistic Solutions</span>
     </div>
     <nav class="nav-links">
-        <a href="#what">What</a>
         <a href="why.html">Why</a>
         <a href="how.html">How</a>
         <a href="where.html">Where</a>
@@ -304,7 +272,7 @@
         <a href="opportunities.html">Careers</a>
     </nav>
     <div class="contact">
-        <a href="tel:+353871214301">+353 871214301</a> 
+        <a href="tel:+353871214301">+353 871214301</a>
     </div>
     <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
@@ -312,7 +280,6 @@
         <div></div>
     </div>
     <nav class="nav-links-mobile" id="mobile-menu">
-        <a href="#what">What</a>
         <a href="why.html">Why</a>
         <a href="how.html">How</a>
         <a href="where.html">Where</a>
@@ -322,25 +289,19 @@
 </header>
 
 <section class="hero">
-    <h1>Leading Commercial Aviation Into The Digital Era</h1>
+    <div class="left">
+        <img src="plane.jpg" alt="Globe with airplanes">
+    </div>
+    <div class="right">
+        <h1>Leading Commercial Aviation Into The Digital Era</h1>
+        <p>A leading provider and a trusted partner in facilitating the shift todigital in aviation technical management.</div>
+    </div>
 </section>
 
 <section class="content" id="what">
     <h2>What do ALS do?</h2>
-    <p>We specialise in aircraft technical records digitisation and management.</p>
-    <p>Quick, easy & secure documentation access preventing the loss or damage of sensitive information.</p>
-    <p>We can turn your tonnes of paper into gigabytes of secure digital data, which is fully indexed, word searchable, and transferable at the push of a button.</p>
-    <p><strong>We help your business to take the risk out of records.</strong></p>
-</section>
-
-<section class="quote">
-    <p>"Innovation doesn’t always come in the form of a new product or new technology. Sometimes it’s about a new way to address an old problem."</p>
-    <div class="author">— Bernard Lord</div>
-</section>
-
-<section class="content" id="why">
-    <h2>Aircraft Technical Records Digitisation in Shannon</h2>
-    <p>As a leading tech services provider specializing in Lease Returns, we bring vast experience in handling early terminations and repossessions. We focus on supporting airlines in managing their fleets effectively, ensuring a smooth and cost-effective lease return process. Our expertise extends to providing critical support that allows businesses to fully capitalize on modern technological advancements. We work closely with our clients to ensure they benefit from the latest cost efficiencies available through digitization and remain compliant with recent legislative changes that facilitate the full transition to digital technical records, including those based in Shannon.</p>
+    <p><strong>ALS is a leading provider of specialized aircraft technical services with a strong focus on digital innovation.</strong></p>
+    <p>Established three years ago, our company has rapidly become a trusted partner for airlines and aircraft leasing companies, offering comprehensive solutions that streamline operations, enhance compliance, and optimize the technical management of aircraft assets.</p>
 </section>
 
 <footer class="footer">
