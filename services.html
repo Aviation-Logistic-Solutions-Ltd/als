@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Our Services - Aviation Logistic Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 60px;
+            margin-right: 15px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00a9d8;
+        }
+
+        /* Centering the nav-links */
+        .nav-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* This makes sure the navigation takes the available space */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center; /* Centering the nav-links within the wrapper */
+        }
+
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #00a9d8;
+        }
+
+        .contact {
+            font-size: 16px;
+            color: #00a9d8;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: #00a9d8;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu Icon */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+        /* Mobile Navigation */
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+            max-height: 0;
+        }
+
+        .nav-links-mobile a {
+            padding: 15px 0;
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .nav-links-mobile a:hover {
+            color: #00a9d8;
+        }
+
+        /* Open Menu */
+        .nav-links-mobile.open {
+            display: flex;
+            max-height: 500px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('.png') no-repeat center center/cover;
+            height: 400px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #b9bbbe;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+            color: #333333;
+        }
+
+        .content h2 {
+            color: #00a9d8;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #00a9d8;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Styles */
+        button, a.button {
+            background-color: #00a9d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        button:hover, a.button:hover {
+            background-color: #008bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .content h2 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .footer {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="ALS Logo">
+            </a>
+            <span>Aviation Logistic Solutions</span>
+        </div>
+        <div class="nav-wrapper"> <!-- Added a wrapper around nav-links -->
+            <nav class="nav-links">
+                <a href="why.html">Why</a>
+                <a href="#">Services</a>
+                <a href="how.html">How</a>
+                <a href="where.html">Where</a>
+                <a href="opportunities.html">Careers</a>
+            </nav>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav-links-mobile" id="mobile-menu">
+            <a href="why.html">Why</a>
+            <a href="#">Services</a>
+            <a href="how.html">How</a>
+            <a href="where.html">Where</a>
+            <a href="opportunities.html">Careers</a>
+        </nav>
+    </header>
+    
+
+<section class="hero">
+    <h1>Our Services</h1>
+</section>
+
+<section class="content">
+    <h2>Aircraft Transition Support</h2>
+    <p>We work very closely with the designated CAMO organization to ensure that all aircraft status reports are compliant. We ensure all necessary Return to Service (RTS) maintenance is appropriately scoped with the MRO and provide oversight of all ongoing maintenance activities on behalf of the lessor.</p>
+
+    <h2>Records Digitisation & Management</h2>
+    <p>We have extensive experience in digitising aircraft technical records, ensuring that all data is meticulously indexed, character searchable, and easily accessible. Our digitisation projects have significantly improved the efficiency and reliability of records management for our clients.</p>
+
+    <h2>Onsite Management</h2>
+    <p>We provide onsite managed services to airline clients, including the digitisation of historical and ongoing aircraft technical records, physical archive management, structures records review, and redelivery compliance consultation. Our team is committed to ensuring seamless management of all records during the process.</p>
+
+    <h2>Cost-Efficient Transition Management</h2>
+    <p>We facilitate smooth and cost-efficient aircraft transitions by engaging early in proactive communication, conducting a thorough requirements analysis, and maintaining ongoing communication throughout the transition process. Our approach ensures all compliance and operational requirements are addressed through a comprehensive End-of-Lease (EOL) work package and ongoing coordination to minimize issues and concerns before the EOL event.</p>
+
+    <h2>Software Development</h2>
+    <p>Our software development team specializes in integrating continuing airworthiness maintenance requirements into a bespoke technical asset management solution. We are dedicated to delivering innovative and customized software solutions that empower our clients to manage their technical assets efficiently and effectively. By leveraging the latest advancements in technology, we provide online solutions that enable real-time access and management from anywhere in the world. Our approach is centered around continuous improvement and innovation, ensuring that our clients benefit from the most up-to-date tools and strategies for optimizing their asset management processes. Whether it's streamlining workflows, enhancing data accuracy, or ensuring compliance with regulatory requirements, we are always at the forefront of developing cutting-edge solutions to meet our clients' evolving needs.</p>
+</section>
+
+<footer class="footer">
+    <p>5 Elite Business Park, Shannon, Co. Clare, V14 FW96 | Aircraft technical records digitisation | Secure digital data</p>
+    <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
