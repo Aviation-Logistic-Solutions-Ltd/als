@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Opportunities - Aviation Logistic Solutions</title>
+    <title>Our Services - Aviation Logistic Solutions</title>
     <style>
         body {
             margin: 0;
@@ -40,10 +40,19 @@
             color: #00a9d8;
         }
 
+        /* Centering the nav-links */
+        .nav-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1; /* This makes sure the navigation takes the available space */
+        }
+
         .nav-links {
             display: flex;
             gap: 20px;
+            justify-content: center; /* Centering the nav-links within the wrapper */
         }
+
 
         .nav-links a {
             color: #333;
@@ -124,7 +133,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('new+banner.png') no-repeat center center/cover;
+            background: url('services.png') no-repeat center center/cover;
             height: 400px;
             color: #ffffff;
             text-align: center;
@@ -143,13 +152,15 @@
 
         /* Content Section */
         .content {
-            background-color: #ffffff;
             padding: 60px 20px;
+            background-color: #ffffff;
             text-align: center;
+            color: #333333;
         }
 
         .content h2 {
             color: #00a9d8;
+            margin-bottom: 20px;
             font-size: 32px;
         }
 
@@ -158,44 +169,16 @@
             line-height: 1.8;
             color: #555;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
         }
 
-        .vacancies {
-            margin-top: 40px;
-        }
-
-        .vacancies h3 {
-            font-size: 24px;
-            color: #00a9d8;
-        }
-
-        .vacancies ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .vacancies ul li {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .cta {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #00a9d8;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta:hover {
-            background-color: #008bb5;
+        .content img {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -216,6 +199,24 @@
             text-decoration: underline;
         }
 
+        /* Button Styles */
+        button, a.button {
+            background-color: #00a9d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        button:hover, a.button:hover {
+            background-color: #008bb5;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
@@ -233,11 +234,9 @@
             .hero h1 {
                 font-size: 28px;
             }
-        }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 24px;
+            .hero p {
+                font-size: 20px;
             }
 
             .content h2 {
@@ -247,11 +246,26 @@
             .content p {
                 font-size: 16px;
             }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
 
             .footer {
                 padding: 15px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -263,14 +277,16 @@
             </a>
             <span>Aviation Logistic Solutions</span>
         </div>
-        <nav class="nav-links">
-            <a href="why.html">Why</a>
-            <a href="services.html">Services</a>
-            <a href="how.html">How</a>
-            <a href="where.html">Where</a>
-            <a href="who.html">Who</a>
-            <a href="#">Careers</a>
-        </nav>
+        <div class="nav-wrapper"> <!-- Added a wrapper around nav-links -->
+            <nav class="nav-links">
+                <a href="why.html">Why</a>
+                <a href="#">Services</a>
+                <a href="how.html">How</a>
+                <a href="where.html">Where</a>
+                <a href="who.html">Who</a>
+                <a href="opportunities.html">Careers</a>
+            </nav>
+        </div>
         <div class="contact">
             <a href="tel:+353871214301">+353 871214301</a>
         </div>
@@ -281,41 +297,41 @@
         </div>
         <nav class="nav-links-mobile" id="mobile-menu">
             <a href="why.html">Why</a>
-            <a href="services.html">Services</a>
+            <a href="#">Services</a>
             <a href="how.html">How</a>
             <a href="where.html">Where</a>
             <a href="who.html">Who</a>
-            <a href="#">Careers</a>
+            <a href="opportunities.html">Careers</a>
         </nav>
     </header>
+    
 
 <section class="hero">
-    <h1>Join Our Team</h1>
+    <h1>Our Services</h1>
 </section>
 
 <section class="content">
-    <h2>ALS Personnel</h2>
-    <p>We have an in-house team of 12 personnel, along with a large pool of remote personnel with a broad array of specific skill sets. This structure enables us to provide a highly professional and tailored solution to our clients.</p>
-    <p>Our remote team is well-equipped to handle diverse tasks with precision, and we also have a dedicated team of personnel working on-location at our customers' headquarters to provide seamless support.</p>
-</section>
+    <h2>Aircraft Transition Support</h2>
+    <p>On both programs, we work very closely with the designated CAMO organization to ensure that all aircraft status reports are compliant. We ensure all necessary Return to Service (RTS) maintenance is appropriately scoped with the MRO and provide oversight of all ongoing maintenance activities on behalf of the lessor.</p>
 
-<section class="content">
-    <h2>Current Opportunities</h2>
-    <p>As a young organisation, we are always looking for the right people to join our team as we grow.</p>
-    <p>If you are enthusiastic, professional, focused, have a keen eye for detail and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
-    <p>We are equal opportunity employers and intend to grow the business sustainably and strategically, always in full support of the clients that we serve.</p>
+    <h2>Records Digitisation & Management</h2>
+    <p>We have extensive experience in digitising aircraft technical records, ensuring that all data is meticulously indexed, character searchable, and easily accessible. Our digitisation projects have significantly improved the efficiency and reliability of records management for our clients.</p>
 
-    <div class="vacancies">
-        <h3>Current Vacancies:</h3>
-        <ul>
-            <li>Currently there are no open positions.</li>
-        </ul>
-        <a class="cta" href="mailto:enquiries@aviationpartners.ie">Get in Touch: Send a cover letter and CV</a>
-    </div>
+    <h2>Onsite Management</h2>
+    <p>We provide onsite managed services to airline clients, including the digitisation of historical and ongoing aircraft technical records, physical archive management, structures records review, and redelivery compliance consultation. Our team is committed to ensuring seamless management of all records during the process.</p>
+
+    <h2>Active Record Management (ARM)</h2>
+    <p>Our ARM service helps reduce aircraft downtime through efficient record management, resulting in a greater Return on Equity (ROE) across the asset's lifecycle. This proactive and transparent approach also fosters long-term customer relationships and ensures effective risk management by reviewing and maintaining accurate records, mitigating risks, and ensuring compliance for higher-risk operators.</p>
+
+    <h2>Cost-Efficient Transition Management</h2>
+    <p>We facilitate smooth and cost-efficient aircraft transitions by engaging early in proactive communication, conducting a thorough requirements analysis, and maintaining ongoing communication throughout the transition process. Our approach ensures all compliance and operational requirements are addressed through a comprehensive End-of-Lease (EOL) work package and ongoing coordination to minimize issues and concerns before the EOL event.</p>
+
+    <h2>Software Development</h2>
+    <p>Our software development team specializes in integrating continuing airworthiness maintenance requirements into a bespoke technical asset management solution. We develop tailored solutions that allow clients to manage their technical assets efficiently and effectively.</p>
 </section>
 
 <footer class="footer">
-    <p>5 Elite Business Park, Shannon, Co. Clare, V14 FW96 | Aircraft technical records digitization | Secure digital data</p>
+    <p>5 Elite Business Park, Shannon, Co. Clare, V14 FW96 | Aircraft technical records digitisation | Secure digital data</p>
     <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
 </footer>
 
