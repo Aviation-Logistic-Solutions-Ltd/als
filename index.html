@@ -3,230 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviation Digital Partners (ADP) - Leading provider of aircraft technical records digitisation and digital transformation solutions for airlines, lessors, and MRO providers in Shannon, Ireland.">
+    <meta name="keywords" content="aviation digital partners, aircraft records digitisation, technical records management, aviation digital transformation, aircraft transition management, Shannon Ireland">
     <link rel="icon" href="favicon.ico" type="image/png">
-    <title>ADP (Aviation Digital Partners)</title>
+    <link rel="canonical" href="https://aviationpartners.ie/index.html">
+    <title>Aviation Digital Partners | Aircraft Records Digitisation & Technical Management</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aviationpartners.ie/">
+    <meta property="og:title" content="Aviation Digital Partners | Aircraft Records Digitisation">
+    <meta property="og:description" content="Leading provider of aircraft technical records digitisation and digital transformation solutions for the aviation industry.">
+    <meta property="og:image" content="https://aviationpartners.ie/adp-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aviationpartners.ie/">
+    <meta property="twitter:title" content="Aviation Digital Partners | Aircraft Records Digitisation">
+    <meta property="twitter:description" content="Leading provider of aircraft technical records digitisation and digital transformation solutions for the aviation industry.">
+    <meta property="twitter:image" content="https://aviationpartners.ie/adp-logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
+          "name": "Aviation Digital Partners",
           "url": "https://aviationpartners.ie",
-          "logo": "/adp-logo.png"
+          "logo": "https://aviationpartners.ie/adp-logo.png",
+          "description": "Leading provider of aircraft technical records digitisation and digital transformation solutions for airlines, lessors, and MRO providers.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate",
+            "addressLocality": "Shannon",
+            "addressRegion": "Co. Clare",
+            "postalCode": "V14 YR20",
+            "addressCountry": "IE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+353 871214301",
+            "contactType": "customer service",
+            "email": "enquiries@aviationpartners.ie"
+          },
+          "sameAs": [
+            "https://aviationpartners.ie"
+          ]
         }
-        </script>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-        }
-
-        header {
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .logo-container {
-            height: 120px;  /* Increased from 70px to 120px */
-            width: 400px;   /* Increased from 300px to 400px */
-            margin-left: 20px;
-            margin-top: 10px;
-            transition: all 0.5s ease;
-        }
- 
-        .logo-container img {
-            height: 100%;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover {
-            color: #00a9d8;
-        }
-
-        .menu-icon {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
-            cursor: pointer;
-        }
-
-        .menu-icon div {
-            width: 100%;
-            height: 3px;
-            background-color: #333;
-            border-radius: 2px;
-        }
-
-        .nav-links-mobile {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            background-color: #ffffff;
-            text-align: center;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
-        }
-
-        .nav-links-mobile a {
-            padding: 15px 0;
-            color: #333;
-            font-size: 18px;
-            text-decoration: none;
-        }
-
-        .nav-links-mobile a:hover {
-            color: #00a9d8;
-        }
-
-        .nav-links-mobile.open {
-            display: flex;
-            max-height: 500px;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            background-color: #00a9d8;
-            padding: 50px 20px;
-            color: #ffffff;
-        }
-
-        .hero .left {
-            width: 50%;
-            text-align: center;
-        }
-
-        .hero .left img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .hero .right {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .content {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .footer {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            color: #555;
-            font-size: 14px;
-        }
-
-        .footer a {
-            color: #00a9d8;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .menu-icon {
-                display: flex;
-            }
-
-            .hero {
-                flex-direction: column;
-            }
-        }
-    </style>
+    </script>
 </head>
 <body>
 <header>
     <div class="logo-container">
-        <img src="adp-logo.png" alt="ADP Logo">
+        <a href="index.html">
+            <img src="adp-logo.png" alt="ADP Logo">
+        </a>
     </div>
     
-    <nav class="nav-links">
-        <a href="why.html">Why</a>
-        <a href="services.html">Services</a>
-        <a href="how.html">How</a>
-        <a href="where.html">Where</a>
-        <a href="opportunities.html">Careers</a>
-    </nav>
-    <div class="menu-icon" onclick="toggleMenu()">
+    <div class="nav-wrapper">
+        <nav class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="digitisation.html">Digitisation</a>
+            <a href="about.html">About</a>
+            <a href="opportunities.html">Careers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    
+    <div class="menu-icon">
         <div></div>
         <div></div>
         <div></div>
     </div>
+    
     <nav class="nav-links-mobile" id="mobile-menu">
-        <a href="why.html">Why</a>
         <a href="services.html">Services</a>
-        <a href="how.html">How</a>
-        <a href="where.html">Where</a>
+        <a href="digitisation.html">Digitisation</a>
+        <a href="about.html">About</a>
         <a href="opportunities.html">Careers</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero hero-split">
     <div class="left">
         <img src="plane.jpg" alt="Globe with airplanes">
     </div>
     <div class="right">
-        <h1>Leading Commercial Aviation Into The Digital Era</h1>
-        <p>A leading provider and a trusted partner in facilitating the shift to digital in aviation technical management.</p>
+        <h1>Leading Commercial Aviation Into <br> The Digital Era</h1>
+        <p>Trusted partner empowering the aviation industry to embrace digital transformation in technical management.</p>
+        <a href="services.html" class="btn mt-3">Explore Our Services</a>
     </div>
 </section>
 
 <footer class="footer">
-    <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitisation | Secure digital data</p>
-    <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+    <div class="container">
+        <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitisation | Secure digital data</p>
+        <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+        <p>Connect with us: <a href="https://www.linkedin.com/company/als-technical-services" target="_blank">LinkedIn</a></p>
+    </div>
 </footer>
 
-<script>
-    function toggleMenu() {
-        document.getElementById('mobile-menu').classList.toggle('open');
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>

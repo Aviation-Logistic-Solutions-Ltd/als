@@ -3,300 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore career opportunities at Aviation Digital Partners. Join our team of aviation professionals specializing in aircraft records digitisation and technical management.">
+  <meta name="keywords" content="aviation careers, aircraft records jobs, aviation digital partners careers, aviation jobs Shannon, technical records management careers">
   <link rel="icon" href="favicon.ico" type="image/png">
-  <title>Opportunities - ADP</title>
+  <link rel="canonical" href="https://aviationpartners.ie/opportunities.html">
+  <title>Careers at Aviation Digital Partners | Join Our Aviation Records Team</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aviationpartners.ie/opportunities.html">
+  <meta property="og:title" content="Careers at Aviation Digital Partners | Join Our Aviation Records Team">
+  <meta property="og:description" content="Explore career opportunities at Aviation Digital Partners. Join our team of aviation professionals specializing in aircraft records digitisation.">
+  <meta property="og:image" content="https://aviationpartners.ie/adp-logo.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aviationpartners.ie/opportunities.html">
+  <meta property="twitter:title" content="Careers at Aviation Digital Partners | Join Our Aviation Records Team">
+  <meta property="twitter:description" content="Explore career opportunities at Aviation Digital Partners. Join our team of aviation professionals specializing in aircraft records digitisation.">
+  <meta property="twitter:image" content="https://aviationpartners.ie/adp-logo.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "name": "Aviation Digital Partners",
       "url": "https://aviationpartners.ie",
-      "logo": "/adp-logo.png"
+      "logo": "https://aviationpartners.ie/adp-logo.png",
+      "description": "Leading provider of aircraft technical records digitisation and digital transformation solutions for airlines, lessors, and MRO providers.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate",
+        "addressLocality": "Shannon",
+        "addressRegion": "Co. Clare",
+        "postalCode": "V14 YR20",
+        "addressCountry": "IE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+353 871214301",
+        "contactType": "customer service",
+        "email": "enquiries@aviationpartners.ie"
+      },
+      "sameAs": [
+        "https://aviationpartners.ie"
+      ]
     }
-    </script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #ffffff;
-      color: #333333;
-    }
-
-    /* Header */
-    header {
-      background-color: #ffffff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    /* Logo Container */
-    .logo-container {
-      height: 120px;  /* Increased from 70px to 120px */
-      width: 400px;   /* Increased from 300px to 400px */
-      margin-left: 20px;
-      margin-top: 10px;
-      transition: all 0.5s ease;
-    }
-    .logo-container img {
-        height: 100%;
-        width: auto;
-    }
-    .logo-container:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Centered Navbar */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      flex: 1;
-      gap: 20px;
-    }
-    .nav-links a {
-      color: #333;
-      text-decoration: none;
-      font-size: 16px;
-    }
-    .nav-links a:hover {
-      color: #00a9d8;
-    }
-
-    /* Hamburger Menu Icon */
-    .menu-icon {
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 21px;
-      cursor: pointer;
-    }
-    .menu-icon div {
-      width: 100%;
-      height: 3px;
-      background-color: #333;
-      border-radius: 2px;
-    }
-
-    /* Mobile Navigation */
-    .nav-links-mobile {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background-color: #ffffff;
-      text-align: center;
-      overflow: hidden;
-      transition: max-height 0.4s ease-in-out;
-      max-height: 0;
-    }
-    .nav-links-mobile a {
-      padding: 15px 0;
-      color: #333;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    .nav-links-mobile a:hover {
-      color: #00a9d8;
-    }
-    /* When the mobile menu is toggled open */
-    .nav-links-mobile.open {
-      display: flex;
-      max-height: 500px;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('new+banner.png') no-repeat center center/cover;
-      height: 400px;
-      color: #ffffff;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-    .hero p {
-      font-size: 24px;
-      color: #b9bbbe;
-    }
-
-    /* Content Section */
-    .content {
-      background-color: #ffffff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .content h2 {
-      color: #00a9d8;
-      font-size: 32px;
-    }
-    .content p {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #555;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .vacancies {
-      margin-top: 40px;
-    }
-    .vacancies h3 {
-      font-size: 24px;
-      color: #00a9d8;
-    }
-    .vacancies ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .vacancies ul li {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    /* Call-to-Action Button */
-    .cta {
-      display: inline-block;
-      margin-top: 20px;
-      background-color: #00a9d8;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .cta:hover {
-      background-color: #008bb5;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: #ffffff;
-      padding: 20px;
-      text-align: center;
-      color: #555;
-      font-size: 14px;
-    }
-    .footer a {
-      color: #00a9d8;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .menu-icon {
-        display: flex;
-      }
-      .hero {
-        height: 300px;
-      }
-      .hero h1 {
-        font-size: 28px;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "Aviation Records Specialist",
+      "description": "We are looking for enthusiastic, professional, and detail-oriented individuals to join our growing team in the aviation records management sector.",
+      "datePosted": "2025-01-01",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Aviation Digital Partners",
+        "sameAs": "https://aviationpartners.ie",
+        "logo": "https://aviationpartners.ie/adp-logo.png"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate",
+          "addressLocality": "Shannon",
+          "addressRegion": "Co. Clare",
+          "postalCode": "V14 YR20",
+          "addressCountry": "IE"
+        }
+      },
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": {
+          "@type": "QuantitativeValue",
+          "value": "Competitive",
+          "unitText": "YEAR"
+        }
+      },
+      "applicationContact": {
+        "@type": "ContactPoint",
+        "email": "enquiries@aviationpartners.ie"
       }
     }
-    @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 24px;
-      }
-      .content h2 {
-        font-size: 28px;
-      }
-      .content p {
-        font-size: 16px;
-      }
-      .footer {
-        padding: 15px;
-      }
-    }
-  </style>
+  </script>
 </head>
 <body>
 
   <header>
-      <div class="logo-container">
+    <div class="logo-container">
         <a href="index.html">
             <img src="adp-logo.png" alt="ADP Logo">
         </a>
-      </div>
-    
-    <!-- Standard Navigation -->
-    <nav class="nav-links">
-      <a href="why.html">Why</a>
-      <a href="services.html">Services</a>
-      <a href="how.html">How</a>
-      <a href="where.html">Where</a>
-      <a href="opportunities.html">Careers</a>
-    </nav>
-    
-    <!-- Hamburger Icon for Mobile -->
-    <div class="menu-icon" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
     
-    <!-- Mobile Navigation -->
+    <div class="nav-wrapper">
+        <nav class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="digitisation.html">Digitisation</a>
+            <a href="about.html">About</a>
+            <a href="#">Careers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    
+    <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
     <nav class="nav-links-mobile" id="mobile-menu">
-      <a href="why.html">Why</a>
-      <a href="services.html">Services</a>
-      <a href="how.html">How</a>
-      <a href="where.html">Where</a>
-      <a href="opportunities.html">Careers</a>
+        <a href="services.html">Services</a>
+        <a href="digitisation.html">Digitisation</a>
+        <a href="about.html">About</a>
+        <a href="#">Careers</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Join Our Team</h1>
-  </section>
-
-  <!-- Content Sections -->
-  <section class="content">
-    <h2>Aviation Digital Partners Team</h2>
-    <p>We have an in-house team of 12 personnel, along with a large pool of remote personnel with a broad array of specific skill sets. This structure enables us to provide a highly professional and tailored solution to our clients.</p>
-    <p>Our remote team is well-equipped to handle diverse tasks with precision, and we also have a dedicated team of personnel working on-location at our customers' headquarters to provide seamless support.</p>
-  </section>
-
-  <section class="content">
-    <h2>Current Opportunities</h2>
-    <p>As a young organisation, we are always looking for the right people to join our team as we grow.</p>
-    <p>If you are enthusiastic, professional, focused, have a keen eye for detail and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
-    <p>We are equal opportunity employers and intend to grow the business sustainably and strategically, always in full support of the clients that we serve.</p>
-    <div class="vacancies">
-      <a class="cta" href="mailto:enquiries@aviationpartners.ie">Get in Touch: Send a cover letter and CV</a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('new+banner.png');"></div>
+    <div class="hero-content">
+        <h1>Join Our Team</h1>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitization | Secure digital data</p>
-    <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
-  </footer>
+<!-- Content Sections -->
+<section class="content">
+    <div class="container">
+        <div class="content-section">
+            <h2>Aviation Digital Partners Team</h2>
+            <p>We have an in-house team of 12 personnel, along with a large pool of remote personnel with a broad array of specific skill sets. This structure enables us to provide a highly professional and tailored solution to our clients.</p>
+            <p>Our remote team is well-equipped to handle diverse tasks with precision, and we also have a dedicated team of personnel working on-location at our customers' headquarters to provide seamless support.</p>
+        </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('open');
-    }
-  </script>
+        <div class="content-section">
+            <h2>Current Opportunities</h2>
+            <p>As a young organisation, we are always looking for the right people to join our team as we grow.</p>
+            <p>If you are enthusiastic, professional, focused, have a keen eye for detail and like the thought of joining an exciting young enterprise, growing with us in support of Ireland's highly successful and burgeoning commercial aviation business, please get in touch with a CV and cover letter.</p>
+            <p>We are equal opportunity employers and intend to grow the business sustainably and strategically, always in full support of the clients that we serve.</p>
+            <div class="vacancies mt-4">
+                <a class="cta" href="mailto:enquiries@aviationpartners.ie">Get in Touch: Send a cover letter and CV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitisation | Secure digital data</p>
+        <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+        <p>Connect with us: <a href="https://www.linkedin.com/company/als-technical-services" target="_blank">LinkedIn</a></p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

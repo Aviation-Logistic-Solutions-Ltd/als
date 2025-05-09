@@ -3,347 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviation Digital Partners offers comprehensive services including aircraft records digitisation, transition management, and secure records storage for airlines, lessors, and MRO providers.">
+    <meta name="keywords" content="aviation services, aircraft records digitisation, aircraft transition management, records storage, archive management, technical records, aviation digital transformation">
     <link rel="icon" href="favicon.ico" type="image/png">
-    <title>Our Services - ADP</title>
+    <link rel="canonical" href="https://aviationpartners.ie/services.html">
+    <title>Aviation Services | Records Digitisation & Transition Management | ADP</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aviationpartners.ie/services.html">
+    <meta property="og:title" content="Aviation Services | Records Digitisation & Transition Management">
+    <meta property="og:description" content="Comprehensive aviation services including aircraft records digitisation, transition management, and secure records storage for airlines and lessors.">
+    <meta property="og:image" content="https://aviationpartners.ie/adp-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aviationpartners.ie/services.html">
+    <meta property="twitter:title" content="Aviation Services | Records Digitisation & Transition Management">
+    <meta property="twitter:description" content="Comprehensive aviation services including aircraft records digitisation, transition management, and secure records storage for airlines and lessors.">
+    <meta property="twitter:image" content="https://aviationpartners.ie/adp-logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
+          "name": "Aviation Digital Partners",
           "url": "https://aviationpartners.ie",
-          "logo": "/adp-logo.png"
+          "logo": "https://aviationpartners.ie/adp-logo.png",
+          "description": "Leading provider of aircraft technical records digitisation and digital transformation solutions for airlines, lessors, and MRO providers.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate",
+            "addressLocality": "Shannon",
+            "addressRegion": "Co. Clare",
+            "postalCode": "V14 YR20",
+            "addressCountry": "IE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+353 871214301",
+            "contactType": "customer service",
+            "email": "enquiries@aviationpartners.ie"
+          },
+          "sameAs": [
+            "https://aviationpartners.ie"
+          ]
         }
-        </script>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Aircraft Records Digitisation",
+          "provider": {
+            "@type": "Organization",
+            "name": "Aviation Digital Partners",
+            "url": "https://aviationpartners.ie"
+          },
+          "description": "End-to-end services in the digitisation and intelligent management of aircraft technical records using OCR technology.",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Global"
+          },
+          "audience": "Airlines, Aircraft Lessors, MRO Providers"
         }
-
-        /* Header */
-        header {
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .logo-container {
-    /* Define a class for the logo container */
- 
-    height: 120px;  /* Increased from 70px to 120px */
-    width: 400px;   /* Increased from 300px to 400px */
- 
-    margin-left: 20px;
- 
-    margin-top: 10px;
-    /* Add a 10-pixel top margin */
-    transition: all 0.5s ease;
-    /* Apply a smooth transition to all properties over 0.5 seconds */
-}
-
-.logo-container img {
-            height: 100%;
-            width: auto;
-        }
-
-        /* Centering the nav-links */
-        .nav-wrapper {
-            display: flex;
-            justify-content: center;
-            flex-grow: 1; /* This makes sure the navigation takes the available space */
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center; /* Centering the nav-links within the wrapper */
-        }
-
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover {
-            color: #00a9d8;
-        }
-
-        .contact {
-            font-size: 16px;
-            color: #00a9d8;
-        }
-
-        .contact a {
-            text-decoration: none;
-            color: #00a9d8;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hamburger Menu Icon */
-        .menu-icon {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
-            cursor: pointer;
-        }
-
-        .menu-icon div {
-            width: 100%;
-            height: 3px;
-            background-color: #333;
-            border-radius: 2px;
-        }
-
-        /* Mobile Navigation */
-        .nav-links-mobile {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            background-color: #ffffff;
-            text-align: center;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
-            max-height: 0;
-        }
-
-        .nav-links-mobile a {
-            padding: 15px 0;
-            color: #333;
-            font-size: 18px;
-            text-decoration: none;
-        }
-
-        .nav-links-mobile a:hover {
-            color: #00a9d8;
-        }
-
-        /* Open Menu */
-        .nav-links-mobile.open {
-            display: flex;
-            max-height: 500px;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('pGra.jpg') no-repeat center center/cover;
-            height: 400px;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: #b9bbbe;
-        }
-
-        /* Content Section */
-        .content {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
-            color: #333333;
-        }
-
-        .content h2 {
-            color: #00a9d8;
-            margin-bottom: 20px;
-            font-size: 32px;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-
-        .content img {
-            width: 100%;
-            max-width: 800px;
-            margin: 30px auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            color: #555;
-            font-size: 14px;
-        }
-
-        .footer a {
-            color: #00a9d8;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Button Styles */
-        button, a.button {
-            background-color: #00a9d8;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-
-        button:hover, a.button:hover {
-            background-color: #008bb5;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .menu-icon {
-                display: flex;
-            }
-
-            .hero {
-                height: 300px;
-            }
-
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 20px;
-            }
-
-            .content h2 {
-                font-size: 28px;
-            }
-
-            .content p {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 24px;
-            }
-
-            .content h2 {
-                font-size: 24px;
-            }
-
-            .content p {
-                font-size: 14px;
-            }
-
-            .footer {
-                padding: 15px;
-            }
-        }
-
-    </style>
+    </script>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="adp-logo.png" alt="ADP Logo">
-            </a>
-        </div>   
-        
-        <div class="nav-wrapper"> <!-- Added a wrapper around nav-links -->
-            <nav class="nav-links">
-                <a href="why.html">Why</a>
-                <a href="#">Services</a>
-                <a href="how.html">How</a>
-                <a href="where.html">Where</a>
-                <a href="opportunities.html">Careers</a>
-            </nav>
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav class="nav-links-mobile" id="mobile-menu">
-            <a href="why.html">Why</a>
-            <a href="#">Services</a>
-            <a href="how.html">How</a>
-            <a href="where.html">Where</a>
-            <a href="opportunities.html">Careers</a>
-        </nav>
-    </header>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="adp-logo.png" alt="ADP Logo">
+        </a>
+    </div>   
     
+    <div class="nav-wrapper">
+        <nav class="nav-links">
+            <a href="#">Services</a>
+            <a href="digitisation.html">Digitisation</a>
+            <a href="about.html">About</a>
+            <a href="opportunities.html">Careers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    
+    <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <nav class="nav-links-mobile" id="mobile-menu">
+        <a href="#">Services</a>
+        <a href="digitisation.html">Digitisation</a>
+        <a href="about.html">About</a>
+        <a href="opportunities.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
 <section class="hero">
-    <h1>Our Services</h1>
+    <div class="hero-bg" style="background-image: url('services.png');"></div>
+    <div class="hero-content">
+        <h1>Our Services</h1>
+    </div>
 </section>
 
 <section class="content">
-    <h2>Aircraft Transition Support</h2>
-    <p>We work very closely with the designated CAMO organization to ensure that all aircraft status reports are compliant. We ensure all necessary Return to Service (RTS) maintenance is appropriately scoped with the MRO and provide oversight of all ongoing maintenance activities on behalf of the clients.</p>
+    <div class="container">
+        <div class="content-section">
+            <p>At Aviation Digital Partners, we specialise in delivering tailored digital and technical solutions across the aviation industry. Whether you're an airline, lessor, OEM, MRO provider, or a technical services organisation, we are here to support your digital transformation and streamline your operations.</p>
+            
+            <p>With decades of hands-on experience across leasing, maintenance engineering, and technical services, our leadership team and expert staff bring unparalleled insight into the challenges and opportunities in aviation records management. This deep-rooted expertise has positioned ADP as a trusted leader — the "Oracle" of aircraft records digitisation and management.</p>
+        </div>
 
-    <h2>Records Digitisation & Management</h2>
-    <p>We have extensive experience in digitising aircraft technical records, ensuring that all data is meticulously indexed, character searchable, and easily accessible. Our digitisation projects have significantly improved the efficiency and reliability of records management for our clients.</p>
+        <div class="content-section">
+            <h2>Digitisation & Management of Aircraft Records</h2>
+            <p>As the aviation industry continues to modernise, digitisation plays a pivotal role in advancing sustainability and operational efficiency. At Aviation Digital Partners, we support this evolution by providing end-to-end services in the digitisation and intelligent management of aircraft technical records.</p>
+            
+            <p>Our solutions are powered by advanced technologies such as Optical Character Recognition (OCR), enabling instant access to data and transforming static documents into dynamic, searchable records. We offer fully managed, onsite services, including the digitisation of both historical and ongoing aircraft records. This also extends to physical archive management, detailed structural records review, and expert consultation on redelivery compliance.</p>
+            
+            <p>Throughout the process, our team ensures secure, accurate, and seamless handling of your aircraft records, empowering you with control and clarity at every stage.</p>
+        </div>
 
-    <h2>Onsite Management</h2>
-    <p>We provide onsite managed services to airline clients, including the digitisation of historical and ongoing aircraft technical records, physical archive management, structures records review, and redelivery compliance consultation. Our team is committed to ensuring seamless management of all aircrafts and records during the process.</p>
+        <div class="content-section">
+            <h2>Aircraft Transition Management</h2>
+            <p>Aircraft transitions often present complex challenges, and as resent statistics are also confirming the records are creating a challenge in this process leading to unforeseen costs on the sides of the operator, lessor affecting the onward lease in a negative fashion.</p>
+            
+            <p>Your two active steps – aircraft records digitisation and early engagement with aircraft records review combined with Aviation Digital Partner's proactive approach ensures smooth and cost-efficient outcomes proactively avoiding unnecessary delays are rising costs. Whether representing an airline, a lessor, or providing dual representation, we prioritize transparent communication to align all parties from the outset ensuring that all parties are working towards same timelines and goals of the project.</p>
+            
+            <p>By conducting comprehensive requirements analysis and maintaining consistent coordination throughout the process, we are able to meet all compliance and operational requirements. Our structured, end-to-end transition methodology includes the preparation of a thorough End-of-Lease (EOL) work package and active management of all related activities to minimize risks and avoid last-minute surprises.</p>
+            
+            <p>Our commitment to precision, lean processes, and timeline discipline ensures that every transition we manage is executed to the highest professional standard.</p>
+        </div>
 
-    <h2>Cost-Efficient Transition Management</h2>
-    <p>We facilitate smooth and cost-efficient aircraft transitions by engaging early in proactive communication, conducting a thorough requirements analysis, and maintaining ongoing communication throughout the transition process. Our approach ensures all compliance and operational requirements are addressed through a comprehensive End-of-Lease (EOL) work package and ongoing coordination to minimize issues and concerns before the EOL event.</p>
-
-    <h2>Software Development</h2>
-    <p>Our software development team specializes in integrating continuing airworthiness maintenance requirements into a bespoke technical asset management solution. We are dedicated to delivering innovative and customized software solutions that empower our clients to manage their technical assets efficiently and effectively. By leveraging the latest advancements in technology, we provide online solutions that enable real-time access and management from anywhere in the world. Our approach is centered around continuous improvement and innovation, ensuring that our clients benefit from the most up-to-date tools and strategies for optimizing their asset management processes. Whether it's streamlining workflows, enhancing data accuracy, or ensuring compliance with regulatory requirements, we are always at the forefront of developing cutting-edge solutions to meet our clients' evolving needs.</p>
+        <div class="content-section">
+            <h2>Records Storage & Archive Management</h2>
+            <p>Located in Shannon, Ireland, our headquarters hosts secure, climate-controlled facilities specifically designed for the storage of physical aircraft technical records. While the aviation sector continues its move toward full digitisation, the need for compliant, well-managed hard copy archives remains critical.</p>
+            
+            <p>At Aviation Digital Partners, we provide a robust storage solution that combines regulated physical infrastructure with deep industry knowledge. Our onsite specialists, experienced in aircraft records management, ensure that your documents are stored safely, accessed efficiently, and handled in line with aviation standards.</p>
+            
+            <p>Clients can retrieve records through scheduled visits or with the assistance of our responsive team, ensuring reliable access without compromising security or compliance. Whether part of a broader digitisation effort or a standalone storage solution, our archive services are designed to give you peace of mind and full operational support.</p>
+        </div>
+    </div>
 </section>
 
 <footer class="footer">
-    <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitisation | Secure digital data</p>
-    <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+    <div class="container">
+        <p>Beech Park House, Beech Park Business Centre, Smithstown Industrial Estate, Shannon, Co. Clare, V14 YR20 | Aircraft technical records digitisation | Secure digital data</p>
+        <p>+353 871214301 | <a href="mailto:enquiries@aviationpartners.ie">enquiries@aviationpartners.ie</a></p>
+        <p>Connect with us: <a href="https://www.linkedin.com/company/als-technical-services" target="_blank">LinkedIn</a></p>
+    </div>
 </footer>
 
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('open');
-    }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
