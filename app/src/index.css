@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn bridge mapped onto the paper/ink/data palette */
+    --background: 44 33% 89%; /* paper */
+    --foreground: 203 44% 10%; /* ink */
+    --card: 42 43% 94%; /* paper-2 */
+    --card-foreground: 203 44% 10%;
+    --popover: 42 43% 94%;
+    --popover-foreground: 203 44% 10%;
+    --primary: 193 100% 42%; /* data cyan */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 30% 16%;
+    --secondary-foreground: 42 43% 94%;
+    --muted: 44 20% 82%;
+    --muted-foreground: 209 11% 47%; /* steel */
+    --accent: 13 64% 48%; /* stamp */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 13 64% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 203 20% 78%;
+    --input: 203 20% 78%;
+    --ring: 193 100% 42%;
+    --radius: 2px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv05';
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  ::selection {
+    background: theme('colors.data');
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  /* uppercase mono metadata label */
+  .meta {
+    @apply font-mono text-[0.7rem] uppercase tracking-meta;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
